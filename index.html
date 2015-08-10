@@ -1,7 +1,7 @@
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="zh"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="zh"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="zh"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="zh" > <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" lang="zh"><!--<![endif]-->
 <head>
@@ -34,25 +34,36 @@
 
 <link rel="stylesheet" href="dist/css/animate.css" />
 <link rel="stylesheet" href="dist/css/style.css" />
-
+<style>
+.ie-lt9 .ieHidden {
+	display: none;
+}
+</style>
 <script src="dist/js/libs/modernizr-2.7.1.dev.js"></script>
 <script src="dist/js/ModernizrAu.js"></script>
 <script src="plugin/AnimatedSVGIcons/js/snap.svg-min.js"></script>
 
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script> -->
 <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="dist/js/libs/jquery-1.11.1.js"><\/script>')</script>
-<!-- <script src="dist/js/controllers.js"></script> -->
-
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+<!-- 尚未套程式時使用 -->
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script> -->
+<!-- <script>window.jQuery || document.write('\x3Cscript src="dist/js/libs/angular.min.js">\x3C/script>')</script> -->
+<script src="dist/js/libs/angular.min.js"></script>
+<!--[if lte IE 8]>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<![endif]-->
+<script src="dist/nav.js"></script>
+
+
 </head>
 
-<body class="index_page" ng-app>
+<body class="index_page" ng-app="app">
 
 
 
@@ -150,19 +161,21 @@
 
 <section id="bannerSlider" class="banner flexslider" >
 	<ul class="slides">
-		<li class="banner" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1; background-image: url(http://case2.ecmd.com.tw/jasonwang826-data/sys/slide/fpath.1.jpg);">
+		<li class="banner" style="background-image: url(dist/images/banner-index5.jpg);">
 			<a href="products_list1.html" class="index-banner hide_txt">more info</a></li>
-		<li class="banner" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1; background-image: url(http://case2.ecmd.com.tw/jasonwang826-data/sys/slide/fpath.2.jpg);">
+		<li class="banner" style="background-image: url(jasonwang826-data/sys/slide/fpath.1.jpg);">
+			<a href="products_list1.html" class="index-banner hide_txt">more info</a></li>
+		<li class="banner" style="background-image: url(jasonwang826-data/sys/slide/fpath.2.jpg);">
 			<a href="httproducts_list1.html" class="index-banner hide_txt">more info</a></li>
-		<li class="banner" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1; background-image: url(http://case2.ecmd.com.tw/jasonwang826-data/sys/slide/fpath.3.jpg);">
+		<li class="banner" style="background-image: url(jasonwang826-data/sys/slide/fpath.3.jpg);">
 			<a href="products_list1.html" class="index-banner hide_txt">more info</a></li>
-		<li class="banner flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2; background-image: url(http://case2.ecmd.com.tw/jasonwang826-data/sys/slide/fpath.4.jpg);">
+		<li class="banner" style="background-image: url(jasonwang826-data/sys/slide/fpath.4.jpg);">
 			<a href="products_list1.html" class="index-banner hide_txt">more info</a></li>
 	</ul>
 </section>
 
 <main class="">
-	<section id="netAssetValueBar" class="fullbg row0 net_asset_value">
+	<section id="netAssetValueBar" class="fullbg row0 net_asset_value" ng-controller="navCtrl">
 		<div class="wrapper cf">
 			<div class="col-4 txt-6">Today's Net Asset Value</div>
 			<div class="col-4">
@@ -170,14 +183,14 @@
 					<span class="net_asset_value-label-bg"></span>
 					<span class="net_asset_value-label-cnt txt-6_1">基金淨值日</span>
 				</label>
-				<div class="net_asset_value-txt col txt-6">2015/07/16</div>
+				<div class="net_asset_value-txt col txt-6" ng-bind="navList[0].date">讀取資料中...</div>
 			</div>
 			<div class="col-4">
 				<label for="" class="net_asset_value-label col ">
 					<span class="net_asset_value-label-bg"></span>
 					<span class="net_asset_value-label-cnt txt-6_1">最新淨值</span>
 				</label>
-				<div class="net_asset_value-txt col txt-6">10.150</div>
+				<div class="net_asset_value-txt col txt-6" ng-bind="navList[0].val">讀取資料中...</div>
 			</div>
 			<div class="col-4">
 				<button type="button" id="netAssetValueBtn" class="btn btn-more">
@@ -191,21 +204,25 @@
 		<div id="netAssetValuePanel" class="net_asset_value-history">
 			<div class="wrapper">
 				<ul class="cf">
-					<li><span class="date">2015/07/15</span><span class="num">10.172</span></li>
-					<li><span class="date">2015/07/14</span><span class="num">10.171</span></li>
-					<li><span class="date">2015/07/13</span><span class="num">10.195</span></li>
-					<li><span class="date">2015/07/09</span><span class="num">10.140</span></li>
-					<li><span class="date">2015/07/08</span><span class="num">10.177</span></li>
-					<li><span class="date">2015/07/07</span><span class="num">10.157</span></li>
-					<li><span class="date">2015/07/06</span><span class="num">10.151</span></li>
-					<li><span class="date">2015/07/03</span><span class="num">10.205</span></li>
-					<li><span class="date">2015/07/02</span><span class="num">10.198</span></li>
-					<li><span class="date">2015/07/01</span><span class="num">10.190</span></li>
-					<li><span class="date">2015/06/30</span><span class="num">10.158</span></li>
-					<li><span class="date">2015/06/29</span><span class="num">10.125</span></li>
-					<li><span class="date">2015/06/26</span><span class="num">10.223</span></li>
-					<li><span class="date">2015/06/25</span><span class="num">10.225</span></li>
-					<li><span class="date">2015/06/24</span><span class="num">10.199</span></li>
+					<li class="ieHidden" ng-repeat="nav in navList | limitTo: shownum">
+						<span class="date" ng-bind="nav.date"></span><span class="num" ng-bind="nav.val">{{nav.val}}</span></li>
+<!--[if lte IE 8]>
+					<li><span class="date">2015-08-05</span><span class="num">9.954</span></li>
+					<li><span class="date">2015-08-04</span><span class="num">9.958</span></li>
+					<li><span class="date">2015-08-03</span><span class="num">10.002</span></li>
+					<li><span class="date">2015-07-31</span><span class="num">10.037</span></li>
+					<li><span class="date">2015-07-30</span><span class="num">10.037</span></li>
+					<li><span class="date">2015-07-29</span><span class="num">10.035</span></li>
+					<li><span class="date">2015-07-28</span><span class="num">10.017</span></li>
+					<li><span class="date">2015-07-27</span><span class="num">10.039</span></li>
+					<li><span class="date">2015-07-24</span><span class="num">10.066</span></li>
+					<li><span class="date">2015-07-23</span><span class="num">10.046</span></li>
+					<li><span class="date">2015-07-22</span><span class="num">10.105</span></li>
+					<li><span class="date">2015-07-21</span><span class="num">10.144</span></li>
+					<li><span class="date">2015-07-20</span><span class="num">10.135</span></li>
+					<li><span class="date">2015-07-17</span><span class="num">10.154</span></li>
+					<li><span class="date">2015-07-16</span><span class="num">10.15</span></li>
+<![endif]-->
 				</ul>
 			</div>
 		</div>
@@ -282,7 +299,7 @@
 		<footer class="character-ft">
 			<div id="charMarquee" class="character-caroul">
 				<ul class="character-caroul-list cf" style="width: auto; display: table; margin: auto;">
-					<li class="character-item"><a href="character-tem-1.html">
+					<li class="character-item"><a href="character.html">
 						<figure>
 							<div class="character-pic pic about-character1">
 								<img src="upload/character/character1.png">
@@ -307,7 +324,7 @@
 									<span class="inner character-name">林彥全</span>
 								</div>
 								<div class="right">
-									<span class="inner character-title">首席投資顧問<br>總經理</span>
+									<span class="inner character-title">董事<br>總經理</span>
 								</div>
 							</figcaption>
 						</figure>
@@ -354,7 +371,7 @@
 			</div>
 		</footer>
 
-		<p class="txt-1">繼2014年多空成長成功募集後，2015年康和期經再度網羅業內菁英，完整不同投資人投資標的。
+		<p class="txt-1">繼2013年12月多空成長成功募集後，2015年康和期經再度網羅業內菁英，完整不同投資人投資標的。
 		<!-- <a href="about.php#teamProfile" class="txt-r1 link-1">認識我們的團隊</a> -->
 		</p>
 		<!-- <img src="<?php //path_au('img'); ?>index-row3.jpg" alt=""> -->
@@ -369,48 +386,48 @@
 			<div class="metro-wrap">
 				<div class="metro-container">
 					<div class="metro-block-style1 cf ib">
-						<a href="news_cnt-tem-26.html"></a>
+						<a href="news_cnt-tem.html#29"></a>
 						<div class="news-pic pic left">
 							<img src="dist/images/news-cover.jpg">
 						</div>
 						<div class="metro-art right">
 							<hgroup>
-								<h1 class="news-title">台指選擇權─專家觀點－9,200點賣壓重 買進賣權因應</h1>
-								<p class="news-time">07月20日 2015</p>
+								<h1 class="news-title">期市衝規模 招手銀行保險業(聯合新聞網)</h1>
+								<p class="news-time">08月05日 2015</p>
 							</hgroup>
 							<p class="news-shrink_text">
-								新聞分享台股上周開始量縮整理，且日線連續4天收黑K棒，顯示追價力道不足、上檔反壓沉重。康和期經認為，觀察8月分合約，考量估計除息點數影響，實值收盤價差由正...</p>
+								新聞分享&nbsp;| 臺灣期貨交易所董事長劉連煜在經濟日報主辦「臺灣期貨市場新亮點-銀行保險業避險增益時代來臨」論壇中致詞指出，期交所去（103）年成績亮麗，交易...</p>
 						</div>
 					</div><!-- /.metro-block-style1  END  !! -->
 					<div class="metro-block-video ib">
-						<a href="news_cnt-tem-2.html"></a>
+						<a href="javascript:void 0;"></a>
 						<div class="news-pic news-video pic">
 							<img src="dist/images/temp/tem4.jpg">
 						</div>
 					</div><!-- /.metro-block-video  END  !! -->
 					<div class="metro-block-single ib">
-						<a href="http://case2.ecmd.com.tw/news_cnt.php?id=27"></a>
+						<a href="news_cnt-tem.html#26"></a>
 						<div class="metro-art">
 							<hgroup>
-								<h1 class="news-title">股票期貨贏家－華通順利填息 可布局股期</h1>
-								<p class="news-time">07月14日 2015</p>
+								<h1 class="news-title">台灣期貨市場新亮點 - 銀行保險業避險增益時代來臨</h1>
+								<p class="news-time">07月20日 2015</p>
 							</hgroup>
 							<p class="news-shrink_text">
-								新聞分享印刷電路板廠華通（2313）上周進行除權息，然而遇到國際股市動盪，導致股價一度跌落年線之下，但在法人持續加碼的拉升力道之下，昨日出現反彈且順利填息...								</p>
+								新聞分享 | 台股上周開始量縮整理，且日線連續4天收黑K棒，顯示追價力道不足、上檔反壓沉重。康和期經認為，觀察8月分合約，考量估計除息點數影響，實值收盤價差由正...</p>
 						</div>
 					</div><!-- /.metro-block-single  END  !! -->
 					<div class="metro-block-style1 cf ib">
-						<a href="news_cnt-tem-3.html"></a>
+						<a href="news_cnt-tem.html#27"></a>
 						<div class="news-pic pic left">
 							<img src="dist/images/news-cover.jpg">
 						</div>
 						<div class="metro-art right">
 							<hgroup>
-								<h1 class="news-title">股票期貨贏家－蘋果助勢 可成股期可加碼</h1>
-								<p class="news-time">06月30日 2015</p>
+								<h1 class="news-title">股票期貨贏家－華通順利填息 可布局股期</h1>
+								<p class="news-time">07月14日 2015</p>
 							</hgroup>
 							<p class="news-shrink_text">
-								新聞分享機殼廠可成（2474）昨（25）日開高拉回震盪，雖然小漲0.4％，不過卻收了一根小黑k。康和期經表示，從基本面來看，下半年還有蘋果新品iPhone6s要出貨，營...									</p>
+								新聞分享 | 印刷電路板廠華通（2313）上周進行除權息，然而遇到國際股市動盪，導致股價一度跌落年線之下，但在法人持續加碼的拉升力道之下，昨日出現反彈且順利填息...								</p>
 						</div>
 					</div><!-- /.metro-block-style1  END  !! -->
 				</div>
@@ -435,10 +452,10 @@
 <!-- <script src="plugin/pathLoader/pathLoader.js"></script> -->
 <script src="plugin/scrollbox/jquery.scrollbox.js"></script>
 <script src="plugin/FlexSlider/jquery.flexslider.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script src="plugin/animation.gsap.js"></script>
 
 <script src="plugin/AnimatedSVGIcons/js/svgicons-config.js"></script>
