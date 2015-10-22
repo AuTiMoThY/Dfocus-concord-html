@@ -1,3 +1,4 @@
+<%@ Page Language="C#" CODEPAGE="65001" %>
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="zh"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="zh"> <![endif]-->
@@ -54,99 +55,8 @@
 
 <body class="products_page">
 
+<!-- #Include virtual=".\dist\inc\header.html" -->
 
-
-<div id="top"></div>
-<header id="" class="global_hd">
-	<!-- <div class="wrapper"> -->
-		<header id="logo" class="ib"><a href="index.html" title="康和期貨網站首頁"><img src="dist/images/LOGO.png" alt=""></a></header>
-		<nav class="main_nav ib ">
-			<ul class="cf">
-<li class="main_nav-item nav-concord item1">
-	<a href="javascript:mainNavLink('goto1');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">認識康和期經</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item1_1">
-			<a href="aboutCPCS.html">資產保護</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-<li class="main_nav-item nav-concord item2">
-	<a href="javascript:mainNavLink('goto2');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">三大事業體</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item2_1">
-			<a href="futures_managed.html">期貨經理事業</a>
-		</li>
-		<li class="subNav-item item2_2">
-			<a href="futures_fund.html">期貨信託事業</a>
-		</li>
-		<li class="subNav-item item2_3">
-			<a href="futures_advisory.html">期貨顧問事業</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-<li class="main_nav-item nav-concord item3">
-	<a href="javascript:mainNavLink('goto3');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">產品介紹</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item3_1">
-			<a href="products_list1.html">基金</a>
-		</li>
-		<li class="subNav-item item3_2">
-			<a href="products_list2.html">全權委託</a>
-		</li>
-		<li class="subNav-item item3_3">
-			<a href="products_list3.html">顧問服務</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-<li class="main_nav-item nav-concord item4">
-	<a href="news.html">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">市場消息</span></span>
-	</a>
-</li>
-<li class="main_nav-item nav-concord item5">
-	<a href="javascript:mainNavLink('goto5');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">客服中心</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item5_1">
-			<a href="monthlyreport.html">投資月報</a>
-		</li>
-		<li class="subNav-item item5_2">
-			<a href="download.html">文件下載</a>
-		</li>
-		<li class="subNav-item item5_3">
-			<a href="saleschannel.html">銷售機構</a>
-		</li>
-		<li class="subNav-item item5_4">
-			<a href="qa.html">常見問題</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-				<li class="quick_bar">
-					<div class="login">
-						<a href="https://fm.concordfutures.com.tw/fundM/Login.aspx" class="hide_txt" target="_blank">會員登入</a>
-					</div>
-				</li>
-			</ul>
-		</nav>
-		<div id="menu">
-			<div class="si-icons si-icons-default">
-				<span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
-			</div>
-		</div>
-
-	<!-- </div> -->
-</header>
  <div id="bannerTrigger"></div>
  <section id="pageBanner" class="banner" style="background-image: url(dist/images/banner-chatroom.jpg); background-position: 50% 0px;"></section>
 
@@ -166,15 +76,7 @@
 		<div class="wrapper">
 			<div id="" class="faq-container serviceCnt-container tab_block cf" style="width: 100%;">
 				<div class="row1 cf">
-					<div id="tabsMarquee" class="faq-tabs-wrap left" style="width: 100%;">
-						<ul class="tabs faq-tabs cf">
-							<li style="width: 20% !important;"> <a href="products_list3.html" class="txt-2" title="All">All</a> </li>
-							<li style="width: 20% !important;"> <a href="chatroom1.html" class="txt-2" title="程式設計">程式設計</a> </li>
-							<li class="active" style="width: 20% !important;"> <a href="chatroom2.html" class="txt-2" title="異業合作">異業合作</a> </li>
-							<li style="width: 20% !important;"> <a href="chatroom3.html" class="txt-2" title="講座舉辦">講座舉辦</a> </li>
-							<li style="width: 20% !important;"> <a href="chatroom4.html" class="txt-2" title="固定專題">固定專題</a> </li>
-						</ul>
-					</div>
+<!-- #Include virtual=".\dist\inc\chatroom_tab.html" -->
 				</div>
 			</div>
 
@@ -197,8 +99,8 @@
 
 </main>
 
-<footer id="loadFt"></footer>
-
+<!-- <footer id="loadFt"></footer> -->
+<!-- #Include virtual=".\dist\inc\footer.html" -->
 
 
 <script src="dist/js/libs/jquery.scrollTo.min.js"></script>
@@ -226,9 +128,10 @@
 
 <script>
 $(function() {
-	$.get("dist/inc/footer.html", function(data){
-		$("#loadFt").html(data);
-	})
+	$("#chatRoomCate2").addClass('active');
+	// $.get("dist/inc/footer.html", function(data){
+	// 	$("#loadFt").html(data);
+	// })
 });
 </script>
 

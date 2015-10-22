@@ -1,3 +1,4 @@
+<%@ Page Language="C#" CODEPAGE="65001" %>
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="zh"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="zh"> <![endif]-->
@@ -65,99 +66,7 @@
 
 <body class="index_page" ng-app="app">
 
-
-
-<div id="top"></div>
-<header id="" class="global_hd">
-	<!-- <div class="wrapper"> -->
-		<header id="logo" class="ib"><a href="index.html" title="康和期貨網站首頁"><img src="dist/images/LOGO.png" alt=""></a></header>
-		<nav class="main_nav ib ">
-			<ul class="cf">
-<li class="main_nav-item nav-concord item1">
-	<a href="javascript:mainNavLink('goto1');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">認識康和期經</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item1_1">
-			<a href="aboutCPCS.html">資產保護</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-<li class="main_nav-item nav-concord item2">
-	<a href="javascript:mainNavLink('goto2');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">三大事業體</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item2_1">
-			<a href="futures_managed.html">期貨經理事業</a>
-		</li>
-		<li class="subNav-item item2_2">
-			<a href="futures_fund.html">期貨信託事業</a>
-		</li>
-		<li class="subNav-item item2_3">
-			<a href="futures_advisory.html">期貨顧問事業</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-<li class="main_nav-item nav-concord item3">
-	<a href="javascript:mainNavLink('goto3');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">產品介紹</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item3_1">
-			<a href="products_list1.html">基金</a>
-		</li>
-		<li class="subNav-item item3_2">
-			<a href="products_list2.html">全權委託</a>
-		</li>
-		<li class="subNav-item item3_3">
-			<a href="products_list3.html">顧問服務</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-<li class="main_nav-item nav-concord item4">
-	<a href="news.html">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">市場消息</span></span>
-	</a>
-</li>
-<li class="main_nav-item nav-concord item5">
-	<a href="javascript:mainNavLink('goto5');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">客服中心</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item5_1">
-			<a href="monthlyreport.html">投資月報</a>
-		</li>
-		<li class="subNav-item item5_2">
-			<a href="download.html">文件下載</a>
-		</li>
-		<li class="subNav-item item5_3">
-			<a href="saleschannel.html">銷售機構</a>
-		</li>
-		<li class="subNav-item item5_4">
-			<a href="qa.html">常見問題</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-				<li class="quick_bar">
-					<div class="login">
-						<a href="https://fm.concordfutures.com.tw/fundM/Login.aspx" class="hide_txt" target="_blank">會員登入</a>
-					</div>
-				</li>
-			</ul>
-		</nav>
-		<div id="menu">
-			<div class="si-icons si-icons-default">
-				<span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
-			</div>
-		</div>
-
-	<!-- </div> -->
-</header>
+<!-- #Include virtual=".\dist\inc\header.html" -->
 
 <section id="bannerSlider" class="banner flexslider" >
 	<ul class="slides">
@@ -207,25 +116,25 @@
 					<li class="ieHidden" ng-repeat="nav in navList | limitTo: shownum">
 						<span class="date" ng-bind="nav.date"></span><span class="num" ng-bind="nav.val">{{nav.val}}</span></li>
 <!--[if lte IE 8]>
-					<li><span class="date">2015-09-04</span><span class="num">10.556</span></li>
-					<li><span class="date">2015-09-03</span><span class="num">10.633</span></li>
-					<li><span class="date">2015-09-02</span><span class="num">10.622</span></li>
-					<li><span class="date">2015-09-01</span><span class="num">10.522</span></li>
-					<li><span class="date">2015-08-31</span><span class="num">10.614</span></li>
-					<li><span class="date">2015-08-28</span><span class="num">10.519</span></li>
-					<li><span class="date">2015-08-27</span><span class="num">10.513</span></li>
-					<li><span class="date">2015-08-26</span><span class="num">10.497</span></li>
-					<li><span class="date">2015-08-25</span><span class="num">10.494</span></li>
-					<li><span class="date">2015-08-24</span><span class="num">10.425</span></li>
-					<li><span class="date">2015-08-21</span><span class="num">10.182</span></li>
-					<li><span class="date">2015-08-20</span><span class="num">10.129</span></li>
-					<li><span class="date">2015-08-19</span><span class="num">10.123</span></li>
-					<li><span class="date">2015-08-18</span><span class="num">10.077</span></li>
-					<li><span class="date">2015-08-17</span><span class="num">10.025</span></li>
-					<li><span class="date">2015-08-14</span><span class="num">9.960</span></li>
-					<li><span class="date">2015-08-13</span><span class="num">9.973</span></li>
-					<li><span class="date">2015-08-12</span><span class="num">9.936</span></li>
-					<li><span class="date">2015-08-11</span><span class="num">10.004</span></li>
+					<li><span class="date">2015-10-21</span><span class="num">10.806</span></li>
+					<li><span class="date">2015-10-20</span><span class="num">10.759</span></li>
+					<li><span class="date">2015-10-19</span><span class="num">10.772</span></li>
+					<li><span class="date">2015-10-16</span><span class="num">10.788</span></li>
+					<li><span class="date">2015-10-15</span><span class="num">10.795</span></li>
+					<li><span class="date">2015-10-14</span><span class="num">10.814</span></li>
+					<li><span class="date">2015-10-13</span><span class="num">10.887</span></li>
+					<li><span class="date">2015-10-12</span><span class="num">10.870</span></li>
+					<li><span class="date">2015-10-08</span><span class="num">10.839</span></li>
+					<li><span class="date">2015-10-07</span><span class="num">10.917</span></li>
+					<li><span class="date">2015-10-06</span><span class="num">10.889</span></li>
+					<li><span class="date">2015-10-05</span><span class="num">10.925</span></li>
+					<li><span class="date">2015-10-02</span><span class="num">10.894</span></li>
+					<li><span class="date">2015-10-01</span><span class="num">10.889</span></li>
+					<li><span class="date">2015-09-30</span><span class="num">10.805</span></li>
+					<li><span class="date">2015-09-25</span><span class="num">10.725</span></li>
+					<li><span class="date">2015-09-24</span><span class="num">10.675</span></li>
+					<li><span class="date">2015-09-23</span><span class="num">10.665</span></li>
+					<li><span class="date">2015-09-22</span><span class="num">10.719</span></li>
 <![endif]-->
 				</ul>
 			</div>
@@ -440,8 +349,9 @@
 	</section><!-- / section.row4  END  !!-->
 </main>
 
-<footer id="loadFt"></footer>
+<!-- <footer id="loadFt"></footer> -->
 
+<!-- #Include virtual=".\dist\inc\footer.html" -->
 
 
 <script src="dist/js/libs/jquery.scrollTo.min.js"></script>
@@ -477,9 +387,9 @@ $(window).load(function() {
 	})
 });
 $(function() {
-	$.get("dist/inc/footer.html", function(data){
-		$("#loadFt").html(data);
-	})
+	// $.get("dist/inc/footer.html", function(data){
+	// 	$("#loadFt").html(data);
+	// })
 
 	var $charMarquee = $("#charMarquee");
 	var charMarqueeH = $charMarquee.outerHeight();

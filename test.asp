@@ -1,3 +1,5 @@
+<%@ Page Language="C#" %>
+
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="zh"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="zh"> <![endif]-->
@@ -8,7 +10,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>康和期經產品介紹 | 康和期貨經理事業</title>
+<title>康和期貨經理事業</title>
 <!-- <meta name="title" content="" /> -->
 <meta name="keywords" content="康和期貨經理事業"><!-- 關鍵字 -->
 <meta name="description" content="康和期貨經理事業" /><!-- 網站描述 -->
@@ -39,11 +41,9 @@
 <script src="dist/js/ModernizrAu.js"></script>
 <script src="plugin/AnimatedSVGIcons/js/snap.svg-min.js"></script>
 
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script> -->
 <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="dist/js/libs/jquery-1.11.1.js"><\/script>')</script>
-<!-- <script src="dist/js/controllers.js"></script> -->
 
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -52,14 +52,14 @@
 
 </head>
 
-<body class="products_page">
+<body class="index_page">
 
-
+@{ var myMessage =	"Hello World"; }
 
 <div id="top"></div>
 <header id="" class="global_hd">
 	<!-- <div class="wrapper"> -->
-		<header id="logo" class="ib"><a href="http://fm.concordfutures.com.tw/" title="康和期貨網站首頁"><img src="dist/images/LOGO.png" alt=""></a></header>
+		<header id="logo" class="ib"><a href="index.html" title="康和期貨網站首頁"><img src="dist/images/LOGO.png" alt=""></a></header>
 		<nav class="main_nav ib ">
 			<ul class="cf">
 <li class="main_nav-item nav-concord item1">
@@ -102,7 +102,7 @@
 			<a href="products_list2.html">全權委託</a>
 		</li>
 		<li class="subNav-item item3_3">
-			<a href="products_list3.aspx">顧問服務</a>
+			<a href="products_list3.html">顧問服務</a>
 		</li>
 		<li class="padding"></li>
 	</ul>
@@ -147,50 +147,17 @@
 
 	<!-- </div> -->
 </header>
- <div id="bannerTrigger"></div>
- <section id="pageBanner" class="banner" style="background-image: url(dist/images/banner-chatroom.jpg); background-position: 50% 0px;"></section>
+
 
 
 <main class="">
-<section class="fullbg row2">
-	<div class="bg"></div>
-	<div class="wrapper">
 
-		<div class="cnt">
-			<ul class="chatroom-list cf">
-				<li class="chatroom-item pdt-item" style="min-height:auto;"><a href="products_list1.html">
-					<header class="text-center">
-						<h1 class="txt-3" data-lang="en" style="margin-bottom:0;">Futures Trust Fund</h1>
-						<h2 class="txt-3_2" data-lang="tw" style="margin-top:0;">基金</h2>
-					</header>
-					<div class="chatroom-pic pic" style="padding-bottom:0;height:auto;">
-						<img src="dist/images/pic-pdt1.jpg" alt="">
-					</div>
-				</a></li>
-				<li class="chatroom-item pdt-item" style="min-height:auto;"><a href="products_list2.html">
-					<header class="text-center">
-						<h1 class="txt-3" data-lang="en" style="margin-bottom:0;">Futures Managed Account</h1>
-						<h2 class="txt-3_2" data-lang="tw" style="margin-top:0;">全權委託</h2>
-					</header>
-					<div class="chatroom-pic pic" style="padding-bottom:0;height:auto;">
-						<img src="dist/images/pic-pdt2.jpg" alt="">
-					</div>
-				</a></li>
-				<li class="chatroom-item pdt-item" style="min-height:auto;"><a href="products_list3.aspx">
-					<header class="text-center">
-						<h1 class="txt-3" data-lang="en" style="margin-bottom:0;">Futures Advisory</h1>
-						<h2 class="txt-3_2" data-lang="tw" style="margin-top:0;">顧問服務</h2>
-					</header>
-					<div class="chatroom-pic pic" style="padding-bottom:0;height:auto;">
-						<img src="dist/images/pic-pdt3.jpg" alt="">
-					</div>
-				</a></li>
-
-			</ul>
-		</div>
-	</div>
-</section>
-
+ @myMessage<br> @myMessage<br> @myMessage<br>
+test<br>test<br>test<br>
+test<br>test<br>test<br>
+test<br>test<br>test<br>
+test<br>test<br>test<br>
+test<br>test<br>test<br>
 </main>
 
 <footer id="loadFt"></footer>
@@ -209,10 +176,10 @@
 <!-- <script src="plugin/pathLoader/pathLoader.js"></script> -->
 <script src="plugin/scrollbox/jquery.scrollbox.js"></script>
 <script src="plugin/FlexSlider/jquery.flexslider.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script src="plugin/animation.gsap.js"></script>
 
 <script src="plugin/AnimatedSVGIcons/js/svgicons-config.js"></script>

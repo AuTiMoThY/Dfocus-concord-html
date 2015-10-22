@@ -1,3 +1,5 @@
+<%@ Page Language="C#" CODEPAGE="65001" %>
+
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="zh"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="zh"> <![endif]-->
@@ -8,7 +10,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>講座舉辦 - 顧問產品介紹 | 康和期貨經理事業</title>
+<title>顧問產品介紹 | 康和期貨經理事業</title>
 <!-- <meta name="title" content="" /> -->
 <meta name="keywords" content="康和期貨經理事業"><!-- 關鍵字 -->
 <meta name="description" content="康和期貨經理事業" /><!-- 網站描述 -->
@@ -53,100 +55,9 @@
 </head>
 
 <body class="products_page">
+<!-- #Include virtual=".\dist\inc\header.html" -->
 
 
-
-<div id="top"></div>
-<header id="" class="global_hd">
-	<!-- <div class="wrapper"> -->
-		<header id="logo" class="ib"><a href="index.html" title="康和期貨網站首頁"><img src="dist/images/LOGO.png" alt=""></a></header>
-		<nav class="main_nav ib ">
-			<ul class="cf">
-<li class="main_nav-item nav-concord item1">
-	<a href="javascript:mainNavLink('goto1');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">認識康和期經</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item1_1">
-			<a href="aboutCPCS.html">資產保護</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-<li class="main_nav-item nav-concord item2">
-	<a href="javascript:mainNavLink('goto2');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">三大事業體</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item2_1">
-			<a href="futures_managed.html">期貨經理事業</a>
-		</li>
-		<li class="subNav-item item2_2">
-			<a href="futures_fund.html">期貨信託事業</a>
-		</li>
-		<li class="subNav-item item2_3">
-			<a href="futures_advisory.html">期貨顧問事業</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-<li class="main_nav-item nav-concord item3">
-	<a href="javascript:mainNavLink('goto3');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">產品介紹</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item3_1">
-			<a href="products_list1.html">基金</a>
-		</li>
-		<li class="subNav-item item3_2">
-			<a href="products_list2.html">全權委託</a>
-		</li>
-		<li class="subNav-item item3_3">
-			<a href="products_list3.html">顧問服務</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-<li class="main_nav-item nav-concord item4">
-	<a href="news.html">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">市場消息</span></span>
-	</a>
-</li>
-<li class="main_nav-item nav-concord item5">
-	<a href="javascript:mainNavLink('goto5');">
-		<span class="wrap"><i class="main_nav-icon"></i><span class="main_nav-txt">客服中心</span></span>
-	</a>
-	<ul class="subNav js-subNav">
-		<li class="subNav-item item5_1">
-			<a href="monthlyreport.html">投資月報</a>
-		</li>
-		<li class="subNav-item item5_2">
-			<a href="download.html">文件下載</a>
-		</li>
-		<li class="subNav-item item5_3">
-			<a href="saleschannel.html">銷售機構</a>
-		</li>
-		<li class="subNav-item item5_4">
-			<a href="qa.html">常見問題</a>
-		</li>
-		<li class="padding"></li>
-	</ul>
-</li>
-				<li class="quick_bar">
-					<div class="login">
-						<a href="https://fm.concordfutures.com.tw/fundM/Login.aspx" class="hide_txt" target="_blank">會員登入</a>
-					</div>
-				</li>
-			</ul>
-		</nav>
-		<div id="menu">
-			<div class="si-icons si-icons-default">
-				<span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
-			</div>
-		</div>
-
-	<!-- </div> -->
-</header>
  <div id="bannerTrigger"></div>
  <section id="pageBanner" class="banner" style="background-image: url(dist/images/banner-chatroom.jpg); background-position: 50% 0px;"></section>
 
@@ -166,20 +77,90 @@
 		<div class="wrapper">
 			<div id="" class="faq-container serviceCnt-container tab_block cf" style="width: 100%;">
 				<div class="row1 cf">
-					<div id="tabsMarquee" class="faq-tabs-wrap left" style="width: 100%;">
-						<ul class="tabs faq-tabs cf">
-							<li style="width: 20% !important;"> <a href="products_list3.html" class="txt-2" title="All">All</a> </li>
-							<li style="width: 20% !important;"> <a href="chatroom1.html" class="txt-2" title="程式設計">程式設計</a> </li>
-							<li style="width: 20% !important;"> <a href="chatroom2.html" class="txt-2" title="異業合作">異業合作</a> </li>
-							<li class="active" style="width: 20% !important;"> <a href="chatroom3.html" class="txt-2" title="講座舉辦">講座舉辦</a> </li>
-							<li style="width: 20% !important;"> <a href="chatroom4.html" class="txt-2" title="固定專題">固定專題</a> </li>
-						</ul>
-					</div>
+<!-- #Include virtual=".\dist\inc\chatroom_tab.html" -->
 				</div>
 			</div>
 
 			<div class="cnt">
 				<ul class="chatroom-list cf">
+
+					<li class="chatroom-item">
+						<div class="chatroom-during txt-3">
+							2015 09月15日 ~ 10月01日
+						</div>
+						<div class="chatroom-pic pic">
+							<img src="upload/chat_room/20150908.jpg">
+							<a href="chatroom_cnt-tem.html#16" class="btn btn-gochatroomCnt txt-2_1">課程內容</a>
+						</div>
+						<div class="chatroom-block">
+							<div class="chatroom-title txt-1_1">
+								策略經理人系列 - 第二梯次
+							</div>
+							<div class="chatroom-lecturer txt-1_4">
+								<span class="chatroom-block-label">講師：</span>
+								<span class="chatroom-block-cnt">廖又瑨</span>
+							</div>
+							<div class="chatroom-guests txt-1_4">
+								<span class="chatroom-block-label">嘉賓：</span>
+								<span class="chatroom-block-cnt">彭國釗</span>
+							</div>
+							<div class="chatroom-date txt-1_4">
+								<span class="chatroom-block-label">日期：</span>
+								<span class="chatroom-block-cnt">第二梯次：09/15(二)、09/17(四)、09/22(二)、09/24(四)、09/29(二)、10/01(四)</span>
+							</div>
+							<div class="chatroom-time txt-1_4">
+								<span class="chatroom-block-label">時間：</span>
+								<span class="chatroom-block-cnt">18:30~21:00</span>
+							</div>
+							<div class="chatroom-time txt-1_4">
+								<span class="chatroom-block-label">地點：</span>
+								<span class="chatroom-block-cnt">台北市信義區基隆路一段176號6樓</span>
+							</div>
+							<div class="chatroom-money txt-1_4">
+								<span class="chatroom-block-label">費用：</span>
+								<span class="chatroom-block-cnt">NT$ 19,800</span>
+							</div>
+						</div>
+					</li>
+
+					<li class="chatroom-item">
+						<div class="chatroom-during txt-3">
+							2015 08月11日 ~ 08月27日
+						</div>
+						<div class="chatroom-pic pic">
+							<img src="upload/chat_room/20150814.jpg">
+							<a href="chatroom_cnt-tem.html#15" class="btn btn-gochatroomCnt txt-2_1">課程內容</a>
+						</div>
+						<div class="chatroom-block">
+							<div class="chatroom-title txt-1_1">
+								策略經理人系列 - 第一梯次
+							</div>
+							<div class="chatroom-lecturer txt-1_4">
+								<span class="chatroom-block-label">講師：</span>
+								<span class="chatroom-block-cnt">廖又瑨</span>
+							</div>
+							<div class="chatroom-guests txt-1_4">
+								<span class="chatroom-block-label">嘉賓：</span>
+								<span class="chatroom-block-cnt">彭國釗</span>
+							</div>
+							<div class="chatroom-date txt-1_4">
+								<span class="chatroom-block-label">日期：</span>
+								<span class="chatroom-block-cnt">第一梯次：08/11(二)、08/13(四)、08/18(二)、08/20(四)、08/25(二)、08/27(四)</span>
+							</div>
+							<div class="chatroom-time txt-1_4">
+								<span class="chatroom-block-label">時間：</span>
+								<span class="chatroom-block-cnt">19:00~21:00</span>
+							</div>
+							<div class="chatroom-time txt-1_4">
+								<span class="chatroom-block-label">地點：</span>
+								<span class="chatroom-block-cnt">台北市信義區基隆路一段176號14樓</span>
+							</div>
+							<div class="chatroom-money txt-1_4">
+								<span class="chatroom-block-label">費用：</span>
+								<span class="chatroom-block-cnt">NT$ 19,800</span>
+							</div>
+						</div>
+					</li>
 
 					<li class="chatroom-item">
 						<div class="chatroom-during txt-3">
@@ -218,7 +199,39 @@
 							</div>
 						</div>
 					</li>
-									
+									<li class="chatroom-item">
+						<div class="chatroom-during txt-3">
+							2015 03月11日 ~ 03月25日						</div>
+						<div class="chatroom-pic pic">
+							<img src="upload/chat_room/icon.3.jpg">
+							<a href="chatroom_cnt-tem.html#3" class="btn btn-gochatroomCnt txt-2_1">課程內容</a>
+						</div>
+						<div class="chatroom-block">
+							<div class="chatroom-title txt-1_1">
+								Multi Charts 基礎應用教學 - 第五梯次							</div>
+							<div class="chatroom-lecturer txt-1_4">
+								<span class="chatroom-block-label">講師：</span>
+								<span class="chatroom-block-cnt">廖又瑨 經理
+							</span></div>
+														<div class="chatroom-date txt-1_4">
+								<span class="chatroom-block-label">日期：</span>
+								<span class="chatroom-block-cnt">第五梯次：03/11(三)、03/13(五)、03/18(三)、03/20(五)、03/25(三)</span>
+							</div>
+							<div class="chatroom-time txt-1_4">
+								<span class="chatroom-block-label">時間：</span>
+								<span class="chatroom-block-cnt">18:30~21:30</span>
+							</div>
+															<div class="chatroom-time txt-1_4">
+									<span class="chatroom-block-label">地點：</span>
+									<span class="chatroom-block-cnt">台北市信義區基隆路一段176號14樓</span>
+								</div>
+														<div class="chatroom-money txt-1_4">
+								<span class="chatroom-block-label">費用：</span>
+								<span class="chatroom-block-cnt">
+									36,000								</span>
+							</div>
+						</div>
+					</li>
 									<li class="chatroom-item">
 						<div class="chatroom-during txt-3">
 							2015 03月06日 ~ 03月06日						</div>
@@ -314,75 +327,45 @@
 							</div>
 						</div>
 					</li>
-
-					<li class="chatroom-item">
+									<li class="chatroom-item">
 						<div class="chatroom-during txt-3">
-							2015 01月28日 ~ 01月28日						</div>
+							2015 02月04日 ~ 02月13日						</div>
 						<div class="chatroom-pic pic">
-							<img src="upload/chat_room/icon.9.jpg">
-							<a href="chatroom_cnt-tem.html#9" class="btn btn-gochatroomCnt txt-2_1">課程內容</a>
+							<img src="upload/chat_room/icon.7.jpg">
+							<a href="chatroom_cnt-tem.html#7" class="btn btn-gochatroomCnt txt-2_1">課程內容</a>
 						</div>
 						<div class="chatroom-block">
 							<div class="chatroom-title txt-1_1">
-								你不可不知的海外期貨							</div>
+								Multi Charts 基礎應用教學 - 第四梯次							</div>
 							<div class="chatroom-lecturer txt-1_4">
 								<span class="chatroom-block-label">講師：</span>
-								<span class="chatroom-block-cnt">Patrick ( 吳宇軒 )
+								<span class="chatroom-block-cnt">廖又瑨 經理
 							</span></div>
 														<div class="chatroom-date txt-1_4">
 								<span class="chatroom-block-label">日期：</span>
-								<span class="chatroom-block-cnt">2015/01/28 ( 星期三 )</span>
+								<span class="chatroom-block-cnt">第四梯次：02/04(三)、02/06(五)、02/11(三)、02/12(四)、02/13(五)</span>
 							</div>
 							<div class="chatroom-time txt-1_4">
 								<span class="chatroom-block-label">時間：</span>
-								<span class="chatroom-block-cnt">18:30 ~ 21:30</span>
-							</div>
-														<div class="chatroom-money txt-1_4">
-								<span class="chatroom-block-label">費用：</span>
-								<span class="chatroom-block-cnt">
-									300								</span>
-							</div>
-						</div>
-					</li>
-					<li class="chatroom-item">
-						<div class="chatroom-during txt-3">
-							2014 12月16日 ~ 12月16日						</div>
-						<div class="chatroom-pic pic">
-							<img src="upload/chat_room/icon.12.jpg">
-							<a href="chatroom_cnt-tem.html#12" class="btn btn-gochatroomCnt txt-2_1">課程內容</a>
-						</div>
-						<div class="chatroom-block">
-							<div class="chatroom-title txt-1_1">
-								貨幣戰爭中的美元與歐元 - 貨幣政策解碼							</div>
-							<div class="chatroom-lecturer txt-1_4">
-								<span class="chatroom-block-label">講師：</span>
-								<span class="chatroom-block-cnt">吳嘉隆 教授
-							</span></div>
-														<div class="chatroom-date txt-1_4">
-								<span class="chatroom-block-label">日期：</span>
-								<span class="chatroom-block-cnt">2014/12月/16（週二）</span>
-							</div>
-							<div class="chatroom-time txt-1_4">
-								<span class="chatroom-block-label">時間：</span>
-								<span class="chatroom-block-cnt">18:30 ~ 21:30</span>
+								<span class="chatroom-block-cnt">18:30~21:30</span>
 							</div>
 															<div class="chatroom-time txt-1_4">
 									<span class="chatroom-block-label">地點：</span>
-									<span class="chatroom-block-cnt">台北市信義區基隆路一段176號B2(康和證券集團大樓)</span>
+									<span class="chatroom-block-cnt">台北市信義區基隆路一段176號14樓</span>
 								</div>
 														<div class="chatroom-money txt-1_4">
 								<span class="chatroom-block-label">費用：</span>
 								<span class="chatroom-block-cnt">
-									300								</span>
+									36,000								</span>
 							</div>
 						</div>
 					</li>
 				</ul>
-<!-- <div class="pages_btn">
+<div class="pages_btn">
 	<ul>
 	<li class="number active"><a href="javascript:void 0;">1</a></li><li class="number"><a href="products_list3-tem-p2.html">2</a></li><li class="next"><a href="products_list3-tem-p2.html"><span class="txt ib">下一頁</span><i class="icon ib"></i></a></li>
 	</ul>
-</div> -->
+</div>
 		<div class="" style="margin: 1em auto 5em;">
 			<a href="products.html" class="txt_img-goback btn-getmore hide_txt link-2">回產品介紹</a>
 		</div>
@@ -393,8 +376,8 @@
 
 </main>
 
-<footer id="loadFt"></footer>
-
+<!-- <footer id="loadFt"></footer> -->
+<!-- #Include virtual=".\dist\inc\footer.html" -->
 
 
 <script src="dist/js/libs/jquery.scrollTo.min.js"></script>
@@ -422,9 +405,10 @@
 
 <script>
 $(function() {
-	$.get("dist/inc/footer.html", function(data){
-		$("#loadFt").html(data);
-	})
+	$("#chatRoomCateA").addClass('active');
+	// $.get("dist/inc/footer.html", function(data){
+	// 	$("#loadFt").html(data);
+	// })
 });
 </script>
 

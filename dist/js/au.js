@@ -22,7 +22,7 @@ function mainNavLink(whereYouGo) {
 			location.href="about.html";
 			break;
 		case "goto2":
-			location.href="index.html#futures";
+			location.href="index.aspx#futures";
 			break;
 		case "goto3":
 			location.href="products.html";
