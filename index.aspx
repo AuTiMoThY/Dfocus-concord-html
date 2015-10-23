@@ -116,6 +116,7 @@
 					<li class="ieHidden" ng-repeat="nav in navList | limitTo: shownum">
 						<span class="date" ng-bind="nav.date"></span><span class="num" ng-bind="nav.val">{{nav.val}}</span></li>
 <!--[if lte IE 8]>
+					<li><span class="date">2015-10-22</span><span class="num">10.812</span></li>
 					<li><span class="date">2015-10-21</span><span class="num">10.806</span></li>
 					<li><span class="date">2015-10-20</span><span class="num">10.759</span></li>
 					<li><span class="date">2015-10-19</span><span class="num">10.772</span></li>
@@ -134,7 +135,6 @@
 					<li><span class="date">2015-09-25</span><span class="num">10.725</span></li>
 					<li><span class="date">2015-09-24</span><span class="num">10.675</span></li>
 					<li><span class="date">2015-09-23</span><span class="num">10.665</span></li>
-					<li><span class="date">2015-09-22</span><span class="num">10.719</span></li>
 <![endif]-->
 				</ul>
 			</div>

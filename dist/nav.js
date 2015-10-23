@@ -4,6 +4,7 @@ app.controller("navCtrl", ['$scope', function($scope){
 	$scope.shownum = 15;
     $scope.navList = [
 
+{date: "2015-10-22", "val": "10.812"},
 {date: "2015-10-21", "val": "10.806"},
 {date: "2015-10-20", "val": "10.759"},
 {date: "2015-10-19", "val": "10.772"},
